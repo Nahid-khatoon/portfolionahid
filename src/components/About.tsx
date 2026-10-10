@@ -20,7 +20,7 @@ export const About: React.FC = () => {
     { label: 'Current Degree', value: 'B.Tech in Computer Science & Engineering' },
     { label: 'University', value: 'Maulana Azad National Urdu University (MANUU)' },
     { label: 'Diploma Honor', value: 'CGPA 9.03 (MANUU Darbhanga)' },
-    { label: 'High School', value: '88.4% Distinction (10th Standard)' },
+    { label: 'High School', value: '84.4% Distinction (10th Standard)' },
     { label: 'Core Focus', value: 'Full Stack Web & Software Engineering' },
     { label: 'Campus Location', value: 'Hyderabad, Telangana, India' },
   ];
@@ -148,7 +148,7 @@ export const About: React.FC = () => {
                     High Academic Honors
                   </span>
                   <h4 className="text-base font-bold text-white mt-1.5">
-                    9.03 CGPA in Diploma & 88.4% in 10th
+                    9.03 CGPA in Diploma & 84.4% in 10th
                   </h4>
                   <p className="mt-1 text-xs text-slate-300 leading-relaxed">
                     Consistent top academic track record demonstrating dedication, strong technical logic, and continuous commitment to excellence.

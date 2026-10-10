@@ -27,6 +27,12 @@ export interface ProjectItem {
   image: string;
   category: string;
   badge?: string;
+  subBadge?: string;
+  isFeatured?: boolean;
+  organization?: string;
+  problemStatement?: string;
+  solution?: string;
+  disclaimer?: string;
   features: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -60,8 +66,8 @@ export const PORTFOLIO_DATA = {
     statusText: "Available for Internships & Full-time Roles",
     metrics: [
       { label: "Diploma CGPA", value: "9.03", sub: "MANUU Darbhanga" },
-      { label: "10th Percentage", value: "88.4%", sub: "High School" },
-      { label: "Projects Completed", value: "3+", sub: "Web & Software" },
+      { label: "10th Percentage", value: "84.4%", sub: "High School" },
+      { label: "Projects Completed", value: "7+", sub: "Web & Software" },
       { label: "SIH Recognition", value: "Finalist", sub: "Rural Tech Innovation" },
     ],
   },
@@ -199,11 +205,11 @@ export const PORTFOLIO_DATA = {
       institution: "R N M Govt Girls +2 School",
       location: "Laheriasarai, Darbhanga, Bihar",
       scoreLabel: "Academic Score",
-      scoreValue: "Percentage: 88.4%",
+      scoreValue: "Percentage: 84.4%",
       period: "Completed",
       badgeColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
       highlights: [
-        "Achieved 88.4% with First Class Distinction across core subjects",
+        "Achieved 84.4% with First Class Distinction across core subjects",
         "Demonstrated strong mathematical aptitude, analytical aptitude, and discipline",
         "Served as active student leader in school science exhibitions and cultural activities",
       ],
@@ -211,6 +217,140 @@ export const PORTFOLIO_DATA = {
   ] as EducationItem[],
 
   projects: [
+    {
+      id: "fusiongrid",
+      title: "FusionGrid — One Citizen. One Journey. Connected Government.",
+      shortDescription:
+        "A prototype interoperability framework connecting heterogeneous government systems through API-based exchange, common data standards, consent-based data sharing, and unified application tracking.",
+      fullDescription:
+        "FusionGrid is a demonstration prototype interoperability framework designed for the Government of Maharashtra to bridge independent government platforms. It connects heterogeneous digital systems through standardized API exchange, common data schemas, consent-based citizen data sharing, unified application tracking, and automated audit monitoring.",
+      problemStatement:
+        "Government digital platforms operate independently, causing fragmented service delivery, repeated information submission, disconnected workflows, and difficulties in cross-department coordination.",
+      solution:
+        "FusionGrid is a prototype interoperability framework that connects heterogeneous government systems through API-based exchange, common data standards, consent-based data sharing, unified application tracking, reusable connectors, workflow orchestration, audit logs, and monitoring.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Supabase Auth",
+        "PostgreSQL",
+      ],
+      image: "/project-fusiongrid.jpg",
+      category: "Government Technology | Interoperability | SIH 2026",
+      badge: "SIH 2026 — Problem Statement 129",
+      subBadge: "Problem Statement 129",
+      organization: "Government of Maharashtra",
+      isFeatured: true,
+      features: [
+        "API Gateway and System Connectors",
+        "Unified Application Tracking",
+        "Consent-Based Data Sharing",
+        "Role-Based Access Control",
+        "Audit Logs and Monitoring",
+        "Event-Driven Notifications",
+        "Data Quality Checks",
+        "Cross-Department Coordination",
+      ],
+      disclaimer:
+        "FusionGrid is a demonstration prototype. Government department integrations use simulated/mock APIs and fictional demo data. Do not claim production integration with actual government databases.",
+      githubUrl: "https://github.com/nahidkhatoon",
+      liveUrl: "https://fusiongrid-seven.vercel.app/",
+    },
+    {
+      id: "edulingo-rural-connect",
+      title: "EduLingo Rural Connect",
+      shortDescription:
+        "A multilingual digital learning platform delivering localized educational lessons, voice narration, and offline-first access across 9 Indian languages for low-bandwidth rural environments.",
+      fullDescription:
+        "EduLingo Rural Connect is a digital learning platform designed to enhance educational access for rural and Tier-3 classrooms. The application supports learning across 9 Indian languages, offering offline lesson caching engineered for 2G networks, voice audio narration, an AI learning assistant, and teacher study material distribution.",
+      problemStatement:
+        "Students in rural and remote regions face significant language divides and unstable connectivity, restricting access to digital education.",
+      solution:
+        "A lightweight, localized EdTech platform with offline-capable lesson caching, multilingual audio narration, and teacher study material distribution engineered for low bandwidth.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Multilingual Engine",
+        "Offline Storage",
+        "Audio Narration",
+      ],
+      image: "/project-sih.jpg",
+      category: "Rural Education & Digital Inclusion",
+      badge: "Rural Education & Digital Inclusion",
+      isFeatured: true,
+      features: [
+        "Multilingual curriculum support in 9 Indian languages",
+        "Offline-first caching engineered for 2G connectivity",
+        "Audio voiceover narration for accessibility",
+        "Interactive AI tutor assistance for student questions",
+        "Teacher study material repository and downloads",
+        "Lightweight UI tailored for rural and Tier-3 village classrooms",
+      ],
+      githubUrl: "https://github.com/nahidkhatoon/sih-rural-network-project",
+      liveUrl: "https://edulingo-rural-connect.lovable.app/",
+    },
+    {
+      id: "virasat-india",
+      title: "Virasat India — Discover the Soul of India",
+      shortDescription:
+        "A static website showcasing India's heritage, traditional art, culture, and cultural diversity.",
+      fullDescription:
+        "Virasat India is a curated cultural exploration website that takes users on an immersive journey across India's architectural monuments, classical arts, regional traditions, and cultural heritage. Built with modern responsive web technologies, it features rich visual storytelling, historical timelines, and interactive cultural showcases.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      image: "/project-virasat.jpg",
+      category: "Indian Heritage, Art & Culture",
+      badge: "Indian Heritage, Art & Culture",
+      isFeatured: false,
+      features: [
+        "Comprehensive architectural monuments and UNESCO heritage guides",
+        "Celebration of regional arts, traditional handicrafts, and cuisines",
+        "Interactive cultural timeline and historical discovery modules",
+        "Responsive, regal visual aesthetics tailored for cultural immersion",
+      ],
+      liveUrl: "https://indianculure.vercel.app/",
+    },
+    {
+      id: "her-shield-safety",
+      title: "Her Shield — Women Safety Awareness",
+      shortDescription:
+        "A static website focused on women safety awareness and providing information and resources related to women's safety.",
+      fullDescription:
+        "Her Shield is a modern digital platform dedicated to women's safety awareness, education, and empowerment. It provides accessible safety practices, awareness about legal rights and protections, practical self-defense techniques, digital safety guides, and verified emergency contact resources.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      image: "/project-womensafety.jpg",
+      category: "Women Safety & Awareness",
+      badge: "Women Safety & Awareness",
+      isFeatured: false,
+      features: [
+        "Actionable personal safety strategies and emergency preparedness",
+        "Educational guide on legal rights and constitutional protections",
+        "Digital privacy practices and cyber-safety awareness",
+        "Verified emergency helplines and quick assistance resources",
+      ],
+      liveUrl: "https://womensafety-tan.vercel.app/",
+    },
+    {
+      id: "careerpath-portal",
+      title: "CareerPath — Career Guidance Portal",
+      shortDescription:
+        "A career guidance website designed to help students explore career options, discover learning pathways, and plan their future.",
+      fullDescription:
+        "CareerPath is an educational guidance portal designed to empower students and early professionals with career clarity. It offers structured learning roadmaps across technology, design, and business domains, industry skill requirements, and step-by-step career pathway planning.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      image: "/project-careerpath.jpg",
+      category: "Career Guidance & Education",
+      badge: "Career Guidance & Education",
+      isFeatured: false,
+      features: [
+        "Structured career roadmaps across modern industry domains",
+        "In-demand skill breakdowns and educational milestone planning",
+        "Self-assessment pathways for aligning interests with career choices",
+        "Clean, student-friendly responsive navigation and resources",
+      ],
+      liveUrl: "https://career-guidance-portal-three.vercel.app/",
+    },
     {
       id: "college-mgmt",
       title: "College Management System",
@@ -222,6 +362,7 @@ export const PORTFOLIO_DATA = {
       image: "/project-college.jpg",
       category: "Full Stack Web Application",
       badge: "Academic Capstone",
+      isFeatured: false,
       features: [
         "Role-Based Access: Dedicated portals for Administrators, Faculty, and Students",
         "Student & Course Catalog: Instant registration, course scheduling, and section enrollment",
@@ -243,6 +384,7 @@ export const PORTFOLIO_DATA = {
       image: "/project-restaurant.jpg",
       category: "POS & Management Software",
       badge: "Operations Software",
+      isFeatured: false,
       features: [
         "Visual Table Layout: Real-time color-coded indicators for vacant, occupied, and reserved tables",
         "Interactive Digital Menu: Categorized menu browsing (Starters, Mains, Desserts, Beverages)",
@@ -251,27 +393,6 @@ export const PORTFOLIO_DATA = {
         "Sales Records: Historical SQL transaction storage for end-of-day revenue analytics",
       ],
       githubUrl: "https://github.com/nahidkhatoon/restaurant-management-system",
-      liveUrl: "#",
-    },
-    {
-      id: "sih-rural-network",
-      title: "Rural Area Network & Language Barrier – SIH Project",
-      shortDescription:
-        "An innovative Smart India Hackathon solution addressing connectivity gaps and regional linguistic barriers through offline-first caching and localized UI.",
-      fullDescription:
-        "Engineered as a high-impact prototype for the prestigious Smart India Hackathon (SIH), this initiative addresses two critical obstacles to digital empowerment in remote regions: intermittent network coverage and regional language divides. The solution leverages low-bandwidth local caching, offline sync mechanisms, and an intuitive iconographic interface offering seamless regional localization in Urdu, Hindi, and English.",
-      technologies: ["Python", "Web Technologies", "Offline Sync", "Multilingual APIs", "HTML5", "CSS3"],
-      image: "/project-sih.jpg",
-      category: "Smart India Hackathon (SIH)",
-      badge: "National Hackathon Finalist",
-      features: [
-        "Offline-First Architecture: Service caching enabling access to essential resources without constant connectivity",
-        "Multilingual Localization: Seamless dual-interface support across Hindi, Urdu, and English",
-        "Low-Bandwidth Optimized: Lightweight web payloads engineered for unstable 2G/3G rural networks",
-        "Voice & Visual Guidance: Integrated audio cues and visual iconography for non-tech-savvy users",
-        "SIH National Problem Statement: Built following rigorous hackathon criteria addressing government digital access challenges",
-      ],
-      githubUrl: "https://github.com/nahidkhatoon/sih-rural-network-project",
       liveUrl: "#",
     },
   ] as ProjectItem[],
